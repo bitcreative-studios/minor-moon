@@ -1,0 +1,31 @@
+---
+import { cn } from '../lib/utils'
+import '../styles/base.fonts.css'
+import Footer from '../components/Footer.astro'
+import GlobalIconSheet from '../components/shared/GlobalIconSheet.astro'
+import Header from '../components/Header.astro'
+
+export interface Props {
+  title: string
+  class?: string
+}
+const { title, class: className } = Astro.props
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <GlobalIconSheet />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col">
+    <Header />
+    <main class={cn('grow', className)}>
+      <slot />
+    </main>
+    <Footer class="mt-32" />
+  </body>
+</html>

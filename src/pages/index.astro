@@ -1,16 +1,53 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Section from '../components/shared/Section.astro'
+import Container from '../components/shared/Container.astro'
+import Button from '../components/Button.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Astro">
+  <Section>
+    <Container>
+      <div class="flex flex-col">
+        <div class="mb-14">
+          <div class="text-2xl font-semibold mb-4">Hello! I'm George</div>
+          <h1 class="text-4xl font-title font-bold tracking-tight sm:text-8xl">
+            Designing digital product with emphasis on <span
+              class="[-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_theme(colors.neutral.12)] lg:[-webkit-text-stroke:2px_theme(colors.neutral.12)]"
+              >visual design</span
+            >
+          </h1>
+        </div>
+        <div class="flex w-full justify-between items-center">
+          <Button class="gap-x-3" size="lg">
+            <div class="whitespace-nowrap">Let&apos;s Talk</div>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M3.125 10H16.875"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M11.25 4.375L16.875 10L11.25 15.625"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </Button>
+          <p class="max-w-md mt-6 font-medium text-lg">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+            lorem cupidatat commodo. Elit sunt amet.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+</BaseLayout>

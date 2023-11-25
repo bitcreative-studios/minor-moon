@@ -1,0 +1,36 @@
+---
+import { cn } from '../../lib/utils'
+export interface Props {
+  social: 'instagram' | 'twitter' | 'twitter-x' | 'github'
+  class?: string
+}
+
+const { social, class: className } = Astro.props
+let socialDisplayName
+switch (social) {
+  case 'instagram':
+    socialDisplayName = 'Instagram'
+    break
+  case 'twitter':
+    socialDisplayName = 'Twitter (X)'
+    break
+  case 'github':
+    socialDisplayName = 'GitHub'
+    break
+}
+---
+
+<a
+  href="#"
+  class="inline-flex items-center justify-center rounded-full h-10 w-10 lg:h-12 lg:w-12 bg-neutral-inverted-3 text-neutral-inverted-12 hover:text-neutral-inverted-11 hover:bg-neutral-inverted-2"
+>
+  <span class="sr-only">{socialDisplayName}</span>
+  <svg
+    class={cn(
+      'h-6 w-6 lg:h-8 lg:w-8 text-neutral-inverted-12 hover:text-neutral-inverted-11',
+      className,
+    )}
+  >
+    <use xlink:href={`#${social}-icon`}></use>
+  </svg>
+</a>
