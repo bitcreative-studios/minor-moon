@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Section from '../components/shared/Section.astro'
 import Container from '../components/shared/Container.astro'
 import Button from '../components/Button.astro'
+import { cn } from '../lib/utils'
+import { button } from '../components/shared/atoms'
 ---
 
 <BaseLayout title="Astro">
@@ -19,33 +21,94 @@ import Button from '../components/Button.astro'
           </h1>
         </div>
         <div class="flex w-full justify-between items-center">
-          <Button class="gap-x-3" size="lg">
-            <div class="whitespace-nowrap">Let&apos;s Talk</div>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
+          <Button class="gap-x-3" size="lg">Let&apos;s Talk</Button>
+          <p class="max-w-md mt-6 font-medium text-lg">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <div class="flex flex-col lg:gap-y-14">
+        <div class="flex justify-between items-center w-full">
+          <h2 class="text-4xl font-extrabold">Selected Works</h2>
+          <Button intent="secondary">View all works</Button>
+        </div>
+        <div class="grid grid-cols-2 gap-x-7 gap-y-14">
+          <div class="rounded-2xl aspect-w-16 aspect-h-9 bg-neutral-4 p-15"></div>
+          <div class="rounded-2xl aspect-w-16 aspect-h-9 bg-neutral-4 p-15"></div>
+          <div class="rounded-2xl aspect-w-16 aspect-h-9 bg-neutral-4 p-15 col-span-2"></div>
+          <div class="rounded-2xl aspect-w-1 aspect-h-1 bg-neutral-4 p-15"></div>
+          <div class="rounded-2xl aspect-w-1 aspect-h-1 bg-neutral-4 p-15"></div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+  <Section>
+    <Container class="relative">
+      <div class="mb-7">
+        <h2 class="text-9x font-bold tracking-tight">
+          A visual designer focused on creating emotional digital experience
+        </h2>
+        <div class="text-xl leading-normal text-muted max-w-[66%]">
+          Concentrate on your primary objective which is expanding your business, and leave it to me to ensure that your
+          business is efficiently portrayed in the digital realm and distinguishes itself from the rivals.
+        </div>
+      </div>
+      <div class="flex justify-between items-center w-full relative">
+        <Button intent="secondary">About me</Button>
+        <div
+          class="absolute text-right grid gap-y-6 grid-cols-1 uppercase font-medium
+            right-0 left-auto top-auto bottom-0 justify-items-end"
+        >
+          <div class="flex flex-col gap-y-6">
+            <a>UX/UX</a>
+            <a>Branding</a>
+          </div>
+          <div class="flex flex-col gap-y-6">
+            <a>Mobile App</a>
+            <a>Website Design</a>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+  <!--  Last Call To Action-->
+  <Section class="bg-neutral-3">
+    <Container>
+      <div class="space-y-14">
+        <div class="flex justify-center items-center">
+          <nav class="flex items-center gap-x-4 font-semibold">
+            <a class="uppercase underline">case studies</a><a class="uppercase underline">about me</a><a
+              class="uppercase underline">insight</a
+            >
+          </nav>
+        </div>
+        <div class="text-9xl leading-none font-extrabold text-center">
+          Want to create something <span class="text-neutral-10">awesome?</span>
+        </div>
+        <div class="flex justify-center items-center">
+          <button class={cn(button({ intent: 'primary', size: 'lg' }))}>
+            <span>Start a Project</span>
+            <span class="ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-auto" viewBox="0 0 111 141" fill="none">
                 <path
-                  d="M3.125 10H16.875"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  class="fill-neutral-inverted-12"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M55.2618 43.4484L54.3221 69.6293L28.1412 70.569L54.3221 71.5086L55.2618 97.6895L56.2014 71.5086L82.3823 70.569L56.2014 69.6293L55.2618 43.4484ZM52.3901 67.6973L54.2624 5.56897H56.2611L58.1334 67.6973L110.298 69.5696V71.5683L58.1334 73.4406L56.2611 135.069H54.2624L52.3901 73.4406L0.225891 71.5683V69.5696L52.3901 67.6973Z"
+                ></path>
                 <path
-                  d="M11.25 4.375L16.875 10L11.25 15.625"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  class="fill-neutral-inverted-12"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M55.2617 8.63077L53.6649 21.4047C50.5344 46.4472 31.3094 66.448 6.41445 70.569C31.3094 74.69 50.5344 94.6908 53.6649 119.733L55.2617 132.507L56.8585 119.733C59.989 94.6907 79.214 74.69 104.109 70.569C79.214 66.448 59.989 46.4472 56.8585 21.4047L55.2617 8.63077ZM51.6803 21.1566L54.2694 0.444946L56.254 0.444946L58.8431 21.1566C61.8656 45.3351 80.4367 64.6429 104.479 68.6031L110.424 69.5823L110.424 71.5557L104.479 72.5349C80.4367 76.4951 61.8656 95.8028 58.8431 119.981L56.254 140.693H54.2694L51.6803 119.981C48.6578 95.8028 30.0867 76.4951 6.04401 72.5349L0.0991832 71.5557L0.0991821 69.5823L6.04401 68.6031C30.0867 64.6429 48.6578 45.3352 51.6803 21.1566Z"
+                ></path>
               </svg>
             </span>
-          </Button>
-          <p class="max-w-md mt-6 font-medium text-lg">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet.
-          </p>
+          </button>
         </div>
       </div>
     </Container>

@@ -3,19 +3,12 @@ import Container from './shared/Container.astro'
 import SocialMediaLink from './shared/SocialMediaLink.astro'
 ---
 
-<footer
-  class="pt-12 pb-6 md:pt-14 md:pb-12 lg:pt-16 bg-neutral-inverted-1"
-  aria-labelledby="footer-heading"
->
+<footer class="pt-12 pb-6 md:pt-14 md:pb-12 lg:pt-16 bg-neutral-inverted-1" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <Container>
     <div class="pt-8 lg:pt-6 lg:flex lg:items-center lg:justify-between">
       <div>
-        <h3
-          class="text-2xl font-title font-bold leading-6 text-neutral-inverted-10"
-        >
-          Subscribe to the newsletter
-        </h3>
+        <h3 class="text-xl font-bold leading-6 text-neutral-inverted-10">Subscribe to the newsletter</h3>
       </div>
       <form class="mt-6 w-full lg:max-w-sm lg:mt-0">
         <div class="border-b-2 border-neutral-inverted-7 pb-3 flex space-x-3">
@@ -32,16 +25,8 @@ import SocialMediaLink from './shared/SocialMediaLink.astro'
               placeholder="Enter your email"
             />
           </div>
-          <div
-            class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0 text-neutral-inverted-12"
-          >
-            <svg
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0 text-neutral-inverted-12">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M15.1 8H7.5C6.9 8 6.5 7.6 6.5 7C6.5 6.4 6.9 6 7.5 6H17.5C18.1 6 18.5 6.4 18.5 7V17C18.5 17.6 18.1 18 17.5 18C16.9 18 16.5 17.6 16.5 17V9.4L8.2 17.7C7.8 18.1 7.2 18.1 6.8 17.7C6.4 17.3 6.4 16.7 6.8 16.3L15.1 8Z"
                 fill="currentColor"></path>
@@ -58,16 +43,8 @@ import SocialMediaLink from './shared/SocialMediaLink.astro'
           <SocialMediaLink social="twitter-x" class="lg:h-6 lg:w-6" />
           <SocialMediaLink social="instagram" />
         </div>
-        <div
-          id="logo-and-tagline"
-          class="mt-8 text-xs md:space-y-2.5 leading-5 text-gray-400 lg:mt-0 lg:order-1"
-        >
-          <svg
-            class="h-12 lg:h-14"
-            viewBox="0 0 465 58"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div id="logo-and-tagline" class="mt-8 text-xs md:space-y-2.5 leading-5 text-gray-400 lg:mt-0 lg:order-1">
+          <svg class="h-12 lg:h-14" viewBox="0 0 465 58" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               class="fill-none stroke-neutral-inverted-12"
               d="M2.592 36.4V30.832C2.592 25.552 5.712 21.232 12.336 21.232H29.424L25.536 29.008H15.312C13.296 29.008 10.8 29.296 10.8 32.416V34.816C10.8 37.936 13.296 38.272 15.312 38.272H25.536L29.424 46H12.336C5.712 46 2.592 41.68 2.592 36.4ZM56.8106 21.232L52.9226 29.008H46.5386C44.5226 29.008 42.0266 29.296 42.0266 32.416V46H33.8186V30.832C33.8186 25.552 36.9386 21.232 43.5626 21.232H56.8106ZM59.0295 36.4V30.832C59.0295 25.552 62.1495 21.232 68.7735 21.232H78.7575C85.3815 21.232 88.5495 25.552 88.5495 30.832C88.5495 31.504 88.5975 32.032 88.5975 32.368C88.5975 34.912 87.6375 36.928 84.5655 36.928H67.3335C67.8135 39.136 69.9735 39.376 71.7495 39.376H84.4695L87.7815 46H68.7735C62.1495 46 59.0295 41.68 59.0295 36.4ZM67.3335 30.304H80.2455C79.7655 28.144 77.6055 27.856 75.8295 27.856H71.7495C69.9255 27.856 67.8135 28.096 67.3335 30.304ZM102 12.016C102.144 12.544 102.192 13.168 102.192 13.984C102.192 14.752 102.144 15.376 102 15.952C101.664 17.248 100.752 18.064 99.744 18.4C99.072 18.64 98.352 18.688 97.392 18.688C96.432 18.688 95.664 18.64 95.04 18.4C94.032 18.064 93.12 17.248 92.784 15.952C92.688 15.376 92.64 14.752 92.64 13.984C92.64 13.168 92.64 12.544 92.784 12.016C93.12 10.72 94.032 9.856 95.04 9.52C95.664 9.328 96.432 9.232 97.392 9.232C98.352 9.232 99.072 9.328 99.744 9.52C100.752 9.856 101.664 10.72 102 12.016ZM101.52 46H93.264V21.232H101.52V46ZM129.601 46H116.257C109.633 46 106.465 41.68 106.513 36.4V30.832C106.513 25.552 109.633 21.232 116.257 21.232H128.017C134.689 21.232 137.809 25.552 137.809 30.832V48.4C137.809 53.68 134.689 58 128.017 58H110.929L114.817 50.224H125.041C127.105 50.224 129.601 49.936 129.601 46.816V46ZM119.233 38.272H129.601V32.416C129.601 29.296 127.105 29.008 125.041 29.008H119.233C117.217 29.008 114.721 29.296 114.721 32.416V34.816C114.721 37.936 117.217 38.272 119.233 38.272ZM152.286 9.232V21.232H161.598C168.222 21.232 171.39 25.552 171.39 30.832V46H163.134V32.416C163.134 29.296 160.686 29.008 158.622 29.008H152.286V46H144.078V11.776L152.286 9.232ZM193.349 46H187.877C181.253 46 178.085 41.728 178.085 36.4V29.008H175.781V21.232H178.085V11.776L186.341 9.232V21.232H193.349V29.008H186.341V34.816C186.341 37.936 188.837 38.272 190.853 38.272H193.349V46ZM208.078 12.016C208.222 12.544 208.27 13.168 208.27 13.984C208.27 14.752 208.222 15.376 208.078 15.952C207.742 17.248 206.83 18.064 205.822 18.4C205.15 18.64 204.43 18.688 203.47 18.688C202.51 18.688 201.742 18.64 201.118 18.4C200.11 18.064 199.198 17.248 198.862 15.952C198.766 15.376 198.718 14.752 198.718 13.984C198.718 13.168 198.718 12.544 198.862 12.016C199.198 10.72 200.11 9.856 201.118 9.52C201.742 9.328 202.51 9.232 203.47 9.232C204.43 9.232 205.15 9.328 205.822 9.52C206.83 9.856 207.742 10.72 208.078 12.016ZM207.598 46H199.342V21.232H207.598V46ZM227.018 46C225.53 46 223.946 45.184 222.986 43.264L211.754 21.232H220.298L227.018 35.104L233.69 21.232H242.282L231.002 43.264C230.042 45.184 228.458 46 227.018 46ZM244.889 36.4V30.832C244.889 25.552 248.009 21.232 254.633 21.232H264.617C271.241 21.232 274.409 25.552 274.409 30.832C274.409 31.504 274.457 32.032 274.457 32.368C274.457 34.912 273.497 36.928 270.425 36.928H253.193C253.673 39.136 255.833 39.376 257.609 39.376H270.329L273.641 46H254.633C248.009 46 244.889 41.68 244.889 36.4ZM253.193 30.304H266.105C265.625 28.144 263.465 27.856 261.689 27.856H257.609C255.785 27.856 253.673 28.096 253.193 30.304Z"
@@ -86,9 +63,7 @@ import SocialMediaLink from './shared/SocialMediaLink.astro'
           </p>
         </div>
       </div>
-      <p class="text-base leading-5 text-muted">
-        &copy; 2023 Creightive Digital, Inc. All rights reserved.
-      </p>
+      <p class="text-base leading-5 text-muted">&copy; 2023 Creightive Digital, Inc. All rights reserved.</p>
     </div>
   </Container>
 </footer>
